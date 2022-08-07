@@ -1,0 +1,19 @@
+label{
+    color : blue;
+}
+.gender{
+    color: red;
+}
+#mobile{
+    color: green;
+    font-size: 50px;
+
+}
+#mydiv{
+    background-image: url('download.jfif');
+    height: 500px;
+    width: 500px;
+}
+p{
+    color: aliceblue;
+}
