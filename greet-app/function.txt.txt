@@ -1,0 +1,32 @@
+function add(a,b){
+            let sum=0;
+            for(let i=0;i<arguments.length;i++){
+                if(arguments[i] instanceof Array){
+                    let arr = arguments[i]
+                    for(let j=0;j<arr.length;j++){
+                        arr[j] = isNaN(parseInt(arr[j])) ? 0 : parseInt(arr[j]);
+                        sum += arr[j];
+                    }
+                }else if(arguments[i] instanceof Function){
+                    let fn=arguments[i]
+                    arguments[i] = fn();
+                    sum+=arguments[i];
+                }
+                else{
+                    arguments[i] = isNaN(parseInt(arguments[i])) ? 0 : parseInt(arguments[i]);
+                    sum+=arguments[i];
+                }   
+            }
+            console.log(sum);
+
+
+            // a = isNaN(parseInt(a)) ? 0 : parseInt(a);
+            // b = isNaN(parseInt(b)) ? 0 : parseInt(b);
+            // if(typeof a ==='number' && typeof b ==='number'){
+            //     console.log(a+b);
+            // }else{
+            //     console.log(0);
+            // }
+        }
+        //sum('10','10',11,12);
+    </script>
